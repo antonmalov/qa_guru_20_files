@@ -19,7 +19,6 @@ public class SelenideFilesTest {
     @Test
     void downloadTxtFileTest() throws Exception {
         open("https://github.com/junit-team/junit5/blob/main/README.md");
-        //$("a[href*='/junit-team/junit5/raw/main/README.md']");
         File download = $("#raw-url").download();
 
         try (InputStream is = new FileInputStream(download)) {
